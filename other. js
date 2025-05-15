@@ -16,3 +16,21 @@ const techConference = {
     ageRestriction: "",
 }
 
+
+{
+    "name": "Tech Conference",
+    "isOnline": false, 
+    "imageUrl": "https://placehold.co/600x400?text=Tech+Conference", 
+    "date": "Thu 13 Jun 2025",
+    "timings": "10:00:00 AM to 12:00:00 PM",
+    "venue": "Marketing World",
+    "address": "Tech Avenue, City",
+    "host": "Tech Experts",
+    "details": "Tech conference hosted by experts will bring new insights to yur understanding of thr current day world of Technology & how the field is changing dynanmically & what you can do to keep up, with the best of the best. This will be held at Marketing World, Tech Avenue, City from 10:00:00 AM to 12:00:00 PM.",
+    "isPaid": false, 
+    "price": "₹ 2500", 
+    "presenters": [{"name": "John Doe", "title": "CTO Tech Company"}, {"name": "Jane Smith", "title": "AI Expert"}], 
+    "tags": ["tech", "innovation"],
+    "dressCode": "Smart Casual"
+}
+
