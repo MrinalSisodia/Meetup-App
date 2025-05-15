@@ -17,8 +17,14 @@ initializeDatabase()
 const Events = require("./models/event.model")
 
 async function readAllEvents() {
-        const allEvents = await Events.find()
+    try{
+const allEvents = await Events.find()
     return allEvents;
+    } catch (error){
+        throw error
+    }
+
+        
 }
 
 app.get("/events", async (req, res) =>{
