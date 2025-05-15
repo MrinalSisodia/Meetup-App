@@ -1,0 +1,18 @@
+
+const techConference = {
+    name: "Tech Conference",
+    isOnline: false, 
+    imageUrl: "", 
+      date: "",
+    timings: "",
+    venue: "",
+    host: "",
+    details: "",
+    isPaid: false, 
+    price: "", 
+    presenters: "", 
+    tags: [],
+    dressCode: "", 
+    ageRestriction: "",
+}
+
