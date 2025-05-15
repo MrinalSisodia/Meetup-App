@@ -38,7 +38,6 @@ tite: String}
 tags: [{type : String,}], 
 dressCode: String, 
 ageRestriction: String
-
 })
 
 const Events = mongoose.model("Events", EventSchema)
