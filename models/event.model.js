@@ -26,9 +26,7 @@ date: { type: String,
   venue: {  
     type: String,
     required: true}, 
-    address:  {  
-    type: String,
-    required: true},
+    address: String,
  isPaid: Boolean,
  price: String,
  presenters: [
@@ -38,7 +36,7 @@ tite: String}
 tags: [{type : String,}], 
 dressCode: String, 
 ageRestriction: String
-})
+}, {timestamps: true})
 
 const Events = mongoose.model("Events", EventSchema)
  
