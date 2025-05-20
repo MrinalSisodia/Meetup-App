@@ -37,10 +37,10 @@ app.get("/events", async (req, res) =>{
 
 })
 
-async function readEventByTitle(eventTitle) {
+async function readEventById(eventId) {
     try{
-const eventByTitle = await Events.findOne(eventTitle)
-    return eventByTitle;
+const eventById = await Events.findById(eventId)
+    return eventById;
     } catch (error){
         throw error
     }
@@ -48,9 +48,9 @@ const eventByTitle = await Events.findOne(eventTitle)
         
 }
 
-app.get("/events/:eventTitle", async (req, res) =>{
+app.get("/events/:eventId", async (req, res) =>{
     try {
-          const event = await readEventByTitle(req.params.eventTitle)
+          const event = await readEventById(req.params.eventId)
           res.status(200).json({event})
     } catch (error) {
         res.status(500).json({error: "Failed to fetch events."})
