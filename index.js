@@ -27,7 +27,7 @@ const allEvents = await Events.find()
         
 }
 
-app.get("/events", async (req, res) =>{
+app.get("/", async (req, res) =>{
     try {
           const events = await readAllEvents()
           res.status(200).json({events})
@@ -97,6 +97,33 @@ app.post("/events", async (req,res) => {
     }
 })
 
+async function updateEvent(eventId, updatedData) {
+  try {
+    const updatedEvent = await Events.findByIdAndUpdate(
+      eventId,
+      updatedData,
+      { new: true, runValidators: true } // return updated doc and apply schema validations
+    );
+    return updatedEvent;
+  } catch (error) {
+    throw error;
+  }
+}
+
+app.put("/events/:id", async (req, res) => {
+  try {
+    const eventId = req.params.id;
+    const updatedEvent = await updateEvent(eventId, req.body);
+
+    if (!updatedEvent) {
+      return res.status(404).json({ error: "Event not found" });
+    }
+
+    res.status(200).json({ message: "Event updated successfully", event: updatedEvent });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to update event" });
+  }
+});
 
 
 async function deleteEvent(eventId) {

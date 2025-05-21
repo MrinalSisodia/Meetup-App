@@ -31,7 +31,8 @@ date: { type: String,
  price: String,
  presenters: [
     {name: String, 
-tite: String}
+title: String, 
+presenterImgUrl: String}
 ],
 tags: [{type : String,}], 
 dressCode: String, 
